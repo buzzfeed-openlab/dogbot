@@ -13,8 +13,7 @@ int servoset(String command) {
 int setdelay(String command) {
     char inputStr[64];
     command.toCharArray(inputStr,64);
-    char *p = strtok(inputStr);
-    turndelay = atoi(p);
+    turndelay = atoi(inputStr);
     return turndelay;
 }
 
@@ -22,7 +21,11 @@ void setup() {
     myservo.attach(D0);
     Particle.function("go", servoset);
     Particle.function("set", setdelay);
+    Particle.subscribe("feed_dogs", myHandler, MY_DEVICES);
 }
 
-void loop() {
+void myHandler(const char *event, const char *data) {
+    myservo.write(turnpos);
+    delay(turndelay);
+    myservo.write(stoppos);
 }
