@@ -1,0 +1,23 @@
+{
+  "name": "dogbot-live",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dogbot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/buzzfeed-openlab/dogbot.git"
+  },
+  "author": "Westley Argentum Hennigh-Palermo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/buzzfeed-openlab/dogbot/issues"
+  },
+  "homepage": "https://github.com/buzzfeed-openlab/dogbot#readme",
+  "dependencies": {
+    "particle-api-js": "^5.2.6",
+    "request": "^2.71.0"
+  }
+}
